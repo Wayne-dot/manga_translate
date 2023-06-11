@@ -2,25 +2,33 @@ import cv2 as cv
 
 # draw a rectangle bounding box with mouse
 
-def draw_rectange(event, x, y, flags, param):
+class draw_bounding_box:
+    def __init__(self):
+        self.start = ()
+        self.image = None
 
-    list_cor = []
+    def draw_rectange(self, event, x, y, flags, param):
 
-    if event == cv.EVENT_LBUTTONDOWN:
-        start = (x, y)
-        print(start)
+        if event == cv.EVENT_LBUTTONDOWN:
+            self.start = (x, y)
 
-    if event == cv.EVENT_LBUTTONUP:
-        end = (x, y)
-        print(end)
+        if event == cv.EVENT_LBUTTONUP:
+            end = (x, y)
+            # print(end)
 
+        
+            cv.rectangle(self.image, self.start, end, (0, 255, 0), 2)
+            cv.imshow("image", self.image)
     
-        cv.rectangle(image, start, end, (0, 255, 0), 2)
-        cv.imshow("image", image)
+    def run(self, image_path):
+        self.image = cv.imread(image_path)
+        cv.imshow("image", self.image)
+        cv.setMouseCallback("image", self.draw_rectange)
+        cv.waitKey(0)
+        cv.destroyAllWindows()
 
 
-image = cv.imread("data/file1.jpg")
-cv.imshow("image", image)
-cv.setMouseCallback("image", draw_rectange)
-cv.waitKey(0)
-cv.destroyAllWindows()
+
+bounding_box = draw_bounding_box()
+bounding_box.run("data/file1.jpg")
+
