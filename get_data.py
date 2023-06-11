@@ -13,11 +13,16 @@ response = requests.get(URL)
 soup = BeautifulSoup(response.text, "html.parser")
 pictures_list = soup.find_all("div", "separator")
 
-for div in pictures_list:
-    link = div.find("a")
-    print(link["href"])
-    break
 
-image = cv2.imread("data/file1.jpg")
-height = image.shape[0]
-width = image.shape[1]
+for div in pictures_list:
+    a = div.find("a")
+    link = a["href"]
+    manga_name = link.split("/")[5]
+    chapter = link.split("/")[6]
+    page = int(link.split("/")[7].split(".")[0])
+    # page need to be -1
+    
+    img = requests.get(link)
+    with open(f"data/chapter{chapter}_page{page-1}.jpg", "wb") as file:
+        file.write(img.content)
+    
