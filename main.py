@@ -4,6 +4,7 @@ import cv2 as cv
 
 class draw_bounding_box:
     def __init__(self):
+        self.corrdinate = []
         self.start = ()
         self.image = None
 
@@ -11,9 +12,11 @@ class draw_bounding_box:
 
         if event == cv.EVENT_LBUTTONDOWN:
             self.start = (x, y)
+            self.corrdinate.append(self.start)
 
         if event == cv.EVENT_LBUTTONUP:
             end = (x, y)
+            self.corrdinate.append(end)
             # print(end)
 
         
@@ -31,4 +34,5 @@ class draw_bounding_box:
 
 bounding_box = draw_bounding_box()
 bounding_box.run("data/file1.jpg")
+print(bounding_box.corrdinate)
 
