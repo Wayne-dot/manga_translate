@@ -1,10 +1,14 @@
 import cv2 as cv
 import numpy as np
 from PIL import Image
+import pytesseract
+
+pytesseract.pytesseract.tesseract_cmd = r"c:\Users\Wayne\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Tesseract-OCR"
 
 # write documentation
 
 # draw a rectangle bounding box with mouse
+
 
 class draw_bounding_box:
     def __init__(self):
@@ -32,8 +36,7 @@ class draw_bounding_box:
         # convert to grey image
         grey = cv.cvtColor(self.image, cv.COLOR_BGR2GRAY)
         cv.imshow("image", self.image)
-        self.height = self.image.shape[0]
-        self.width = self.image.shape[1]
+
 
         # cv.adaptiveThreshold(grey_img, 255, thresholding style, method, size_of_area (must be odd number), constatn substract from weight_mean)
         grey = cv.adaptiveThreshold(grey, 255, cv.THRESH_BINARY, cv.ADAPTIVE_THRESH_GAUSSIAN_C, 71, 10)
@@ -52,8 +55,45 @@ class draw_bounding_box:
         grey = cv.bitwise_not(grey)
 
         # find the text
-        contours, hierarchy  = cv.findContours(grey, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+        counters, hierarchy  = cv.findContours(grey, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 
+        prund_counters = []
+        mask = np.zeros_like(self.image)
+        mask = cv.cvtColor(mask, cv.COLOR_BGR2GRAY)
+        height, width, channel = self.image.shape
+
+        for counter in counters:
+            area = cv.contourArea(counter)
+            if area > 100 and area < ((height / 3) * (width / 3)):
+                prund_counters.append(counter)
+
+        new = cv.drawContours(mask, prund_counters, -1, (255,255,255), 1)
+
+        # draw counter again inside new image
+        counters2, hierarchy2 = cv.findContours(new, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+
+        for counter2 in counters2:
+            area = cv.contourArea(counter2)
+            # search if there is big text
+            if area > 1000 and area < ((height / 3) * (width / 3)):
+                draw_mask = cv.cvtColor(np.zeros_like(self.image), cv.COLOR_BGR2GRAY)
+                approx = cv.approxPolyDP(counter2, 0.01*cv.arcLength(counter2,True), True)
+
+                cv.fillPoly(draw_mask, [approx], (255,0,0))
+                new_image = cv.bitwise_and(draw_mask, cv.cvtColor(self.image, cv.COLOR_BGR2GRAY))
+                # cv.imshow("new", new_image)
+
+                y = approx[:, 0, 1].min()
+                h = approx[:, 0, 1].max() - y
+                x = approx[:, 0, 0].min()
+                w = approx[:, 0, 0].max() - x
+                new_image = new_image[y:y+h, x:x+w]
+
+                cv.imshow("new", new_image)
+
+                pil_image = Image.fromarray(new_image)
+                text = pytesseract.image_to_string(pil_image, lang="kor")
+                print(text)
 
 
 
