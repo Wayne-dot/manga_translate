@@ -20,6 +20,6 @@ for div in pictures_list:
     # page need to be -1
     
     img = requests.get(link)
-    with open(f"data/chapter{chapter}_page{page-1}.jpg", "wb") as file:
+    with open(f"data/{chapter}_page{page-1}.jpg", "wb") as file:
         file.write(img.content)
     
