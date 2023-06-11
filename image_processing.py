@@ -1,4 +1,5 @@
 import cv2 as cv
+import numpy as np
 
 # write documentation
 
@@ -33,9 +34,21 @@ class draw_bounding_box:
         self.height = self.image.shape[0]
         self.width = self.image.shape[1]
 
-        th2 = cv.adaptiveThreshold(grey, 255, cv.THRESH_BINARY_INV, cv.ADAPTIVE_THRESH_GAUSSIAN_C, 101, 10)
+        # cv.adaptiveThreshold(grey_img, 255, thresholding style, method, size_of_area (must be odd number), constatn substract from weight_mean)
+        grey = cv.adaptiveThreshold(grey, 255, cv.THRESH_BINARY, cv.ADAPTIVE_THRESH_GAUSSIAN_C, 71, 10)
+
+        # flip binary value
+        grey = cv.bitwise_not(grey)
+        # remove boundary for word
+        # kernal = matrix around the object
+        # np.ones((row, column), 8-bit unsigned integer (0 to 255))
+        # [[1, 1],
+        # [1, 1]]
+        kernal = np.ones((2, 2), np.uint8)
+        grey = cv.erode(grey, kernal)
         
-        cv.imshow("adopte", th2)
+        grey = cv.bitwise_not(grey)
+        cv.imshow("adopte", grey)
 
 
 
@@ -47,10 +60,3 @@ class draw_bounding_box:
 
 bounding_box = draw_bounding_box()
 bounding_box.run("data/chapter-1_page3.jpg")
-print(bounding_box.corrdinate)
-print(bounding_box.height)
-print(bounding_box.width)
-
-# process image
-# # Issue - image too big
-# maximum (700, 750)
