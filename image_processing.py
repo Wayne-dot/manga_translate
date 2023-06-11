@@ -1,5 +1,6 @@
 import cv2 as cv
 import numpy as np
+from PIL import Image
 
 # write documentation
 
@@ -47,11 +48,16 @@ class draw_bounding_box:
         kernal = np.ones((2, 2), np.uint8)
         grey = cv.erode(grey, kernal)
         
+        # flip binary image
         grey = cv.bitwise_not(grey)
+
+        # find the text
+        contours, hierarchy  = cv.findContours(grey, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+
+
+
+
         cv.imshow("adopte", grey)
-
-
-
         cv.setMouseCallback("image", self.draw_rectange)
         cv.waitKey(0)
         cv.destroyAllWindows()
