@@ -2,8 +2,6 @@ import cv2 as cv
 
 # draw a rectangle bounding box with mouse
 
-
-
 class draw_bounding_box:
     def __init__(self):
         self.corrdinate = []
