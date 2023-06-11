@@ -36,3 +36,6 @@ bounding_box = draw_bounding_box()
 bounding_box.run("data/file1.jpg")
 print(bounding_box.corrdinate)
 
+# process image
+# # Issue - image too big
+# maximum (700, 750)
