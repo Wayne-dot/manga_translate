@@ -1,1 +1,1 @@
-# manga_translate
+# Comic translate
