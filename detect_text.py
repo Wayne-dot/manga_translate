@@ -39,6 +39,7 @@ img = cv2.cvtColor(thres, cv2.COLOR_GRAY2BGR)
 for reg in text_region:
     x, y, w, h = reg
     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+    
 
 cv2.imshow("thres", thres)
 cv2.imshow("modify", img)
