@@ -11,7 +11,7 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
 
 ## Usage
 1. Clone this project locally
-2. 
+2. Run `pip install python` in your base / command line
 
 
 ## Dev Dependencies
