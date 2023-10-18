@@ -5,7 +5,7 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
 
 ## Features
 <p align="center">
-<img src="result.png" width="500" height="500">
+<img src="result.png" width="400" height="400">
 </p>
 
  - [x] Incorporate OPenCV, Pytesseract and Pillow library
