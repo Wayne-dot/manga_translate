@@ -25,7 +25,7 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
    1. Go to https://tesseract-ocr.github.io/tessdoc/Installation.html
    2. Download the Tesseract library base on instruction on the website
    3. For window, you can download at https://github.com/UB-Mannheim/tesseract/wiki
-          
+6. This
    
       
 
