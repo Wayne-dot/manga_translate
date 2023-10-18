@@ -4,8 +4,10 @@
 This is a Python project in which I will use OpenCV and pytesseract to process a comic image and detect text within it. In the future, I will trying to incorporate OpenAI api to translate into different language.
 
 ## Features
- - [x] An complete task
- - [ ] An uncompleted task
+ - [x] Incorporate OPenCV, Pytesseract and Pillow library
+ - [ ] Better text detection
+ - [ ] Translate language wiht OpenAI api or other dependencies
+ - [ ] Paste translated languaged into original image file
 
 ## Usage
 
