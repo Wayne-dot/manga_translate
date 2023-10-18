@@ -11,7 +11,7 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
  - [x] Incorporate OPenCV, Pytesseract and Pillow library
  - [x] Extract the detected text into a .txt file
  - [ ] Enhanced text detection capabilities
- - [ ] Translate language wiht OpenAI api or other dependencies
+ - [ ] Translate language with OpenAI api or other dependencies
  - [ ] Paste translated languaged into original image file
 
 
