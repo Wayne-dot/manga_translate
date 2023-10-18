@@ -16,7 +16,7 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
 3. Run `pip install opencv-python` in your base / command line
 4. Run `python3 -m pip install --upgrade Pillow` in your base / command line
 5. For the Tesseract library, there will be more steps involved in terms of installing it.
-   1. Go to https://tesseract-ocr.github.io/tessdoc/Installation.html
+   1. Go to [https://tesseract-ocr.github.io/tessdoc/Installation.html](https://github.com/UB-Mannheim/tesseract/wiki)
    2. then
 
 
