@@ -33,4 +33,5 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
 
 👤 **Wayne**
 * Github: [@Wayne-dot](https://github.com/Wayne-dot)
+
 👤 **Eliot**
