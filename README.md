@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> This is a python project where I will use OpenCV, a python image processing library, to process an comic image in order to dete
+> This is a Python project in which I will use OpenCV, a Python image processing library, to process a comic image and detect text within it.
 
 ## Author
 
