@@ -32,6 +32,5 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
 ## Author
 
 👤 **Wayne**
-👤 **Eliot**
-
 * Github: [@Wayne-dot](https://github.com/Wayne-dot)
+👤 **Eliot**
