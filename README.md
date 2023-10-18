@@ -4,7 +4,7 @@
 This is a Python project in which I will use OpenCV and pytesseract to process a comic image and detect text within it. In the future, I will trying to incorporate OpenAI api to translate into different language.
 
 ## Features
-![picture alt](http://via.placeholder.com/200x150 "Original image and output text")
+![picture alt]([http://via.placeholder.com/200x150](https://github.com/Wayne-dot/manga_translate/blob/main/result.png) "Original image and output text")
  - [x] Incorporate OPenCV, Pytesseract and Pillow library
  - [x] Extract the detected text into a .txt file
  - [ ] Enhanced text detection capabilities
