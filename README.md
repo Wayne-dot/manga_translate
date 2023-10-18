@@ -3,6 +3,9 @@
 ## Overview
 This is a Python project in which I will use OpenCV and pytesseract to process a comic image and detect text within it.
 
+## Usage
+
+
 
 ## Dev Dependencies
 * OpenCV
