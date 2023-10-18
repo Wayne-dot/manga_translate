@@ -1,18 +1,16 @@
-<h1 align="center">Welcome to Comic translate 👋</h1>
-<p>
-</p>
+<h1 align="center">Welcome to Comic translate </h1>
 
-> This is a python project where I will use OpenCV, a python image processing library, to process an comic image in order to dete
+## Overview
+This is a Python project in which I will use OpenCV and pytesseract to process a comic image and detect text within it.
+
+
+## Dev Dependencies
+* OpenCV
+* Tesseract
+* Pillow
 
 ## Author
 
 👤 **Wayne**
 
 * Github: [@Wayne-dot](https://github.com/Wayne-dot)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
