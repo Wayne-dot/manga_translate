@@ -18,7 +18,7 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
 5. For the Tesseract library, there will be more steps involved in terms of installing it.
    1. Go to https://tesseract-ocr.github.io/tessdoc/Installation.html
    2. Download the Tesseract library base on instruction on the website
-          1. For window, you can download at https://github.com/UB-Mannheim/tesseract/wiki
+      *For window, you can download at https://github.com/UB-Mannheim/tesseract/wiki
           
    
       
