@@ -26,7 +26,7 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
    2. Download the Tesseract library base on instruction on the website
    3. For window, you can download at https://github.com/UB-Mannheim/tesseract/wiki
 6. The data file in this repo has preloaded image data that you can use. You can also use your own image by just changing the code `text = pytesseract.image_to_string(PIL.Image.open("Your image directory"), config=myconfig)`.
-7. At the main.py file, there are notes for purposes of each page segmentation mode and OCR engine mode
+7. At the main.py file, there are notes for purposes of each page segmentation mode and OCR engine mode, you can change them by changing the code `myconfig = r"--psm {page segmentation mode number} --oem {OCR engine mode number}"`
    
       
 
