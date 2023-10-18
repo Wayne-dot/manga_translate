@@ -6,6 +6,9 @@
 
 
 ## Dev Dependencies
+* OpenCV
+* Tesseract
+* Pillow
 
 ## Author
 
