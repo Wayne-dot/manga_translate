@@ -12,7 +12,9 @@ This is a Python project in which I will use OpenCV and pytesseract to process a
 ## Usage
 1. Clone this project locally
 2. Run `pip install python` in your base / command line
-3. r
+3. Run `pip install opencv-python` in your base / command line
+4. Run `python3 -m pip install --upgrade Pillow` in your base / command line
+5. For Tesseract library, there
 
 
 ## Dev Dependencies
