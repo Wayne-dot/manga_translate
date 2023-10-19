@@ -28,11 +28,14 @@ OCR engine mode
 3 Default, base on what is avaliable
 """
 
-# extract string from images
+# change your number of page segmentation mode or OCR engine mode here
 myconfig = r"--psm 3 --oem 3"
+
+# extract string from images
 text = pytesseract.image_to_string(PIL.Image.open("./data/chapter-1_page3.jpg"), config=myconfig)
 print(text)
 
+# output written into txt file
 with open("output.txt", "a") as file:
     file.write(f"{text}\n")
 
