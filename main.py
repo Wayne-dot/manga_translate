@@ -39,6 +39,7 @@ print(text)
 with open("output.txt", "a") as file:
     file.write(f"{text}\n")
 
+# code for drawing rectangle around the texts
 # img = cv2.imread("./data/chapter-1_page3.jpg")
 # height, width, _ = img.shape
 #
