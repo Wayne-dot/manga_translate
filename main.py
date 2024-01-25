@@ -1,6 +1,8 @@
 import pytesseract
-import PIL.Image
-import cv2
+import argparse
+from easyocr import Reader
+from PIL import Image
+
 
 # page segmentation mode
 """
@@ -36,8 +38,8 @@ text = pytesseract.image_to_string(PIL.Image.open("./data/chapter-1_page3.jpg"),
 print(text)
 
 # output written into txt file
-with open("output.txt", "a") as file:
-    file.write(f"{text}\n")
+# with open("output.txt", "a") as file:
+#     file.write(f"{text}\n")
 
 # code for drawing rectangle around the texts, using openCV python package
 # img = cv2.imread("./data/chapter-1_page3.jpg")

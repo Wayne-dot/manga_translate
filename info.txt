@@ -1,0 +1,47 @@
+Struture of the project
+
+project_root/
+|-- data/                # Data-related files and datasets
+|   |-- raw/
+|   |-- processed/
+|-- docs/                # Documentation
+|   |-- images/         # Images for documentation
+|   |-- examples.md     # Example usage and results
+|   |-- installation.md # Installation instructions
+|   |-- usage.md        # Detailed usage documentation
+|-- models/              # Pre-trained models or model checkpoints
+|-- notebooks/           # Jupyter notebooks for experimentation and analysis
+|-- src/                 # Source code
+|   |-- preprocessing/   # Code for image preprocessing
+|   |-- text_detection/   # Code for text detection models and algorithms
+|   |-- text_recognition/ # Code for text recognition models and algorithms
+|   |-- postprocessing/  # Code for post-processing techniques
+|   |-- utils/           # Utility functions and helper modules
+|   |-- main.py          # Main script or application entry point
+|-- tests/               # Unit tests
+|-- .gitignore           # Gitignore file to specify files and directories to ignore
+|-- requirements.txt     # Dependencies and their versions
+|-- LICENSE              # License file (choose a license that suits your project)
+|-- README.md            # Project README file
+|-- setup.py             # Setup file for packaging and distribution
+|-- setup.cfg            # Configuration file for setup.py
+
+
+
+Reference:
+Unet
+https://medium.com/geekculture/building-a-complete-ocr-engine-from-scratch-in-python-be1fd184753b
+
+Flow chart
+https://lucid.app/
+
+
+
+List of resources:
+
+Computer Vision: Algorithms and Applications, 2nd ed.
+    © 2022 Richard Szeliski, The University of Washington https://szeliski.org/Book/
+
+
+
+
